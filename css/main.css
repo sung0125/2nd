@@ -1,12 +1,13 @@
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* 헤더 */
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: #FFFFFF;
+  color: #3563E9;
   padding: 10px 0;
 }
 
@@ -21,83 +22,236 @@ header {
 
 .logo {
   font-size: 24px;
+  color: 3563E9;
 }
 
 .search-bar {
   display: flex;
+  
 }
 
 .search-bar input[type="text"] {
-  padding: 5px;
-  width: 300px;
+  padding: 10px; 
+  width: 350px; 
   border: none;
   border-radius: 3px 0 0 3px;
+  background-color: #eee;
 }
 
 .search-bar button {
-  padding: 5px 10px;
-  background-color: #555;
+  padding: 10px 20px; 
+  background-color: #829BEF;
   color: #fff;
   border: none;
   border-radius: 0 3px 3px 0;
   cursor: pointer;
 }
 
+
+
 .user-links a {
-  color: #fff;
+  color: black;
   text-decoration: none;
   margin-left: 10px;
 }
 
+.border-but{
+  display: inline-block;
+  padding: 8px 20px;
+  border: 2px solid #3563E9;
+  background-color: #FFFFFF;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 5px;
+  color: #3563E9;
+}
+
+.full-but {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3563E9;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  border: none;
+  color: white;
+}
+
+.full-but:hover {
+  background-color: #6a83d2;
+}
+.border-but:hover {
+  background-color: #6a83d2;
+}
+/* 네비게이션 바 */
+
+nav {
+  background-color: #FFFFFF;
+}
+
+.nav-wrap {
+  max-width: 1200px;
+  padding: 10px 20px;
+  margin: 0 auto;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  position: relative;
+}
+
+nav ul li .icon {
+  margin-right: 5px;
+}
+
+nav ul li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 200px;
+  height: au;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+
+
 /* 본문 */
 
 .main-content {
-  padding: 20px 0;
-  background-color: #f9f9f9;
+    padding: 20px 0;
+    background-color: #f9f9f9;
 }
 
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 .container h1 {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .item-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-  grid-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
 }
 
 .item {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%; 
 }
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.item h2 {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.item p {
+    font-size: 14px;
+    color: #555;
+}
+
+
 
 
 /* 풋터 */
 footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
+  color: black;
 }
 
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 0 10px 0;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #E0E0E0;
 }
 
 .footer-content {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.footer-content p {
-  margin: 5px 0;
+.quick-links {
+  border-top: 1px solid #E0E0E0; 
+  border-bottom: 1px solid #E0E0E0; 
 }
+
+.company-info, .quick-links, .social-links {
+  flex: 1;
+  text-align: left;
+}
+
+.company-info, .quick-links, .social-links h3 {
+  text-align: left; /* 제목 왼쪽 정렬 */
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start; /* 항목 가로 정렬 */
+  align-items: center;
+}
+
+footer ul li {
+  margin-right: 15px;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #aaa;
+}
+
+
+
